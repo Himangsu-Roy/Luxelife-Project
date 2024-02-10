@@ -1,0 +1,136 @@
+@import url("https://fonts.googleapis.com/css2?family=Roboto:wght@400;500;700&display=swap");
+
+/* Variables */
+$hero-bg-image: "../images/hero.png";
+
+// Mixin for background image
+@mixin background-image($image) {
+  background-image: url("#{$image}");
+  background-size: cover;
+  background-position: center;
+}
+
+// Reset default browser styles
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: "Roboto", sans-serif;
+}
+
+// Header styles
+header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 20px;
+  background-color: #fff;
+  color: #333;
+
+  .header-left {
+    display: flex;
+    align-items: center;
+
+    img {
+      width: 100px;
+      margin-right: 10px;
+    }
+  }
+
+  .navbar {
+    ul {
+      list-style: none;
+      display: flex;
+
+      li {
+        margin-right: 20px;
+
+        a {
+          color: #333;
+          text-decoration: none;
+        }
+      }
+    }
+  }
+
+  // Header right section
+  .header-right {
+    display: flex;
+    align-items: center;
+
+    .cart-icon {
+      background-color: #f4f4f4;
+      padding: 15px;
+    }
+
+    .search-icon {
+      background-color: #d9a14c;
+      padding: 17px;
+    }
+  }
+}
+
+// Hero section
+.hero {
+  @include background-image($hero-bg-image);
+  // padding: 100px 0;
+  min-height: 700px;
+
+  .hero-content {
+    max-width: 1200px;
+    padding: 20px;
+    margin: 0 auto;
+    color: #fff;
+    height: 100vh;
+    display: flex;
+    align-items: center;
+
+    .main-text-container {
+      max-width: 450px;
+
+      .hero-text-container {
+        display: flex;
+        align-self: start;
+        flex-direction: column;
+
+        p {
+          margin-bottom: 50px;
+        }
+      }
+
+      a {
+        color: #fff;
+        text-decoration: none;
+        background-color: #d9a14c;
+        padding: 20px;
+        letter-spacing: 2px;
+
+        img {
+          margin-left: 8px;
+        }
+      }
+    }
+  }
+}
+
+// Responsive styles
+@media screen and (max-width: 768px) {
+  .hero {
+    padding: 80px 0;
+    // min-height: 200px;
+
+    .hero-content {
+      h1 {
+        font-size: 30px;
+      }
+
+      p {
+        font-size: 16px;
+      }
+
+      .btn {
+        padding: 8px 16px;
+      }
+    }
+  }
+}
