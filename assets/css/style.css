@@ -1,6 +1,6 @@
 @import url("https://fonts.googleapis.com/css2?family=Roboto:wght@400;500;700&display=swap");
 /* Variables */
-* {
+:root {
   margin: 0;
   padding: 0;
   box-sizing: border-box;
@@ -108,7 +108,7 @@ header {
     .work-process .work-process-container .box-content {
       display: flex;
       gap: 30px; }
-      .work-process .work-process-container .box-content .box {
+      .work-process .work-process-container .box-content .box-one {
         background-color: #fff;
         padding: 30px;
         width: 410px;
@@ -117,11 +117,57 @@ header {
         display: flex;
         flex-direction: column;
         justify-content: space-between; }
-        .work-process .work-process-container .box-content .box p {
+        .work-process .work-process-container .box-content .box-one p {
           margin-top: 20px;
           line-height: 30px;
           color: #616670; }
-        .work-process .work-process-container .box-content .box a {
+        .work-process .work-process-container .box-content .box-one a {
+          color: black;
+          letter-spacing: 2px;
+          font-size: small;
+          font-weight: 600;
+          background-color: #fff;
+          align-self: flex-start;
+          padding: 20px;
+          box-shadow: 0px 4px 10px rgba(0, 0, 0, 0.1);
+          transition: box-shadow 0.3s ease; }
+      .work-process .work-process-container .box-content .box-two {
+        background-color: #fff;
+        padding: 30px;
+        width: 410px;
+        height: 300px;
+        margin-top: 40px;
+        display: flex;
+        flex-direction: column;
+        justify-content: space-between; }
+        .work-process .work-process-container .box-content .box-two p {
+          margin-top: 20px;
+          line-height: 30px;
+          color: #616670; }
+        .work-process .work-process-container .box-content .box-two a {
+          color: black;
+          letter-spacing: 2px;
+          font-size: small;
+          font-weight: 600;
+          background-color: #fff;
+          align-self: flex-start;
+          padding: 20px;
+          box-shadow: 0px 4px 10px rgba(0, 0, 0, 0.1);
+          transition: box-shadow 0.3s ease; }
+      .work-process .work-process-container .box-content .box-three {
+        background-color: #fff;
+        padding: 30px;
+        width: 410px;
+        height: 300px;
+        margin-top: 40px;
+        display: flex;
+        flex-direction: column;
+        justify-content: space-between; }
+        .work-process .work-process-container .box-content .box-three p {
+          margin-top: 20px;
+          line-height: 30px;
+          color: #616670; }
+        .work-process .work-process-container .box-content .box-three a {
           color: black;
           letter-spacing: 2px;
           font-size: small;
