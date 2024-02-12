@@ -474,6 +474,19 @@ body {
   }
 }
 
+// Brand logo styles
+.brand-logo {
+  .logo-images {
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+
+    img {
+      width: 130px;
+    }
+  }
+}
+
 // Responsive styles
 @media screen and (max-width: 768px) {
   .hero {
