@@ -23,7 +23,15 @@
     background-color: #fff;
     align-self: flex-start;
     padding: 20px;
-    box-shadow: 0px 4px 10px rgba(0, 0, 0, 0.1); // Add box shadow
-    transition: box-shadow 0.3s ease;
+    box-shadow: 0px 4px 10px rgba(0, 0, 0, 0.1);
+    // transition: box-shadow 0.3s ease;
   }
+}
+
+// small heading style
+@mixin small-heading-style {
+  color: #d9a14c;
+  letter-spacing: 2px;
+  font-weight: 600;
+  text-transform: uppercase;
 }
