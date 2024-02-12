@@ -3,6 +3,7 @@
 
 /* Variables */
 $hero-bg-image: "../images/hero.png";
+$cta-bg-image: "../images/cta.png";
 $paragrap-text-color: #616670;
 
 // Mixin for background image
@@ -101,7 +102,6 @@ header {
         display: flex;
         align-self: start;
         flex-direction: column;
-        // color: #fff;
 
         h5 {
           color: #d9a14c;
@@ -273,6 +273,11 @@ header {
       position: relative;
       box-shadow: 0px 4px 10px rgba(0, 0, 0, 0.05);
       overflow: hidden;
+      transition: box-shadow 0.3s ease;
+
+      &:hover {
+        box-shadow: 0px 6px 15px rgba(0, 0, 0, 0.1);
+      }
 
       .product-price-image {
         background-color: #fbf6ed;
@@ -283,6 +288,7 @@ header {
         .product-name-price {
           padding-top: 20px;
           padding-bottom: 15px;
+          transition: transform 0.6s ease, background-color 0.5s ease; // Smooth transition for background color
         }
 
         h4 {
@@ -302,9 +308,11 @@ header {
             display: flex;
             align-items: center;
             justify-content: center;
-            display: none;
+            // display: none;
             background-color: transparent;
             cursor: pointer;
+            transform: translateY(-60px);
+            transition: transform 0.7s ease;
           }
 
           .add-to-cart-btn {
@@ -313,11 +321,14 @@ header {
             right: 0;
             color: #fff;
             background-color: #d9a14c;
+            font-weight: 600;
             padding: 15px;
             letter-spacing: 2px;
             border: none;
             cursor: pointer;
+            opacity: 0;
             transform: translateY(50px);
+            transition: transform 0.7s ease;
           }
         }
       }
@@ -325,18 +336,81 @@ header {
       &:hover .product-details {
         .add-to-cart-btn {
           transform: translateY(-50px);
+          opacity: 1;
           margin: 0 auto;
         }
 
         .heart-btn {
           transform: translateY(0);
-          display: flex;
         }
 
         .product-name-price {
           transform: translateY(-50px);
           background-color: #fff;
         }
+      }
+    }
+  }
+}
+
+// CTA Styles
+.cta {
+  @include background-image($cta-bg-image);
+  min-height: 200px;
+  margin-bottom: 50px;
+
+  background-color: rgba(0, 0, 0, 0.09);
+  position: relative;
+
+  display: flex;
+  justify-content: center;
+  align-items: center;
+
+  &::before {
+    content: "";
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-color: rgba(0, 0, 0, 0.5);
+    z-index: 1;
+  }
+
+  .cta-container {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 2rem; 
+    z-index: 2;
+
+    .cta-left-text {
+      p {
+        @include small-heading-style;
+      }
+
+      h1 {
+        color: #fff;
+      }
+    }
+
+    .cta-right-input {
+      gap: 20px;
+
+      input {
+        padding: 15px;
+        border: none;
+        min-width: 300px;
+        margin-right: .5rem;
+      }
+      button {
+        text-transform: uppercase;
+        color: #fff;
+        font-weight: 600;
+        background-color: #d9a14c;
+        padding: 15px;
+        letter-spacing: 2px;
+        border: none;
       }
     }
   }
