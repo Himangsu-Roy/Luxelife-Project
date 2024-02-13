@@ -315,6 +315,8 @@ body {
             align-items: center;
             justify-content: center;
             // display: none;
+            width: 40px;
+            height: 40px;
             background-color: transparent;
             cursor: pointer;
             transform: translateY(-60px);
@@ -434,6 +436,23 @@ body {
 
       .how-we-work-left-content {
         max-width: 400px;
+
+        h4 {
+          @include small-heading-style;
+          margin-bottom: 20px;
+        }
+
+        h1 {
+          margin-bottom: 20px;
+          line-height: 40px;
+          font-size: 30px;
+        }
+
+        button {
+          @include genarel-button-style;
+          text-transform: uppercase;
+          margin-top: 25px;
+        }
       }
       .how-we-work-right-content {
         position: relative;
@@ -450,6 +469,19 @@ body {
             padding: 25px;
             .experience-trophy {
               display: flex;
+              align-items: center;
+              margin-bottom: 15px;
+              gap: 0.5rem;
+
+              img {
+                background-color: #d9a14c;
+                border-radius: 100%;
+                padding: 8px;
+              }
+
+              h1 {
+                font-size: xx-large;
+              }
             }
           }
           position: absolute;
@@ -652,6 +684,15 @@ body {
 
     .blog-heading {
       text-align: center;
+
+      h4 {
+        @include small-heading-style;
+        margin-bottom: 15px;
+      }
+
+      h1 {
+        font-size: xx-large;
+      }
     }
 
     .blog-cards {
@@ -824,7 +865,6 @@ body {
       }
 
       .newsletter {
-        // max-width: 15rem;
         h2 {
           color: #d3d4d5;
           margin-bottom: 1rem;
@@ -840,6 +880,7 @@ body {
           border: 1px solid #4f5157;
           background-color: #23262d;
           outline: none;
+          color: #d3d4d5;
         }
 
         input::placeholder {
@@ -854,6 +895,7 @@ body {
           padding: 15px;
           letter-spacing: 2px;
           border: none;
+          cursor: pointer;
         }
       }
     }

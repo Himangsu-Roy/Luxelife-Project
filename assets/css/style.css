@@ -322,6 +322,8 @@ body {
   display: flex;
   align-items: center;
   justify-content: center;
+  width: 40px;
+  height: 40px;
   background-color: transparent;
   cursor: pointer;
   transform: translateY(-60px);
@@ -427,6 +429,29 @@ body {
 .how-we-work .how-we-work-container .how-we-work-content .how-we-work-left-content {
   max-width: 400px;
 }
+.how-we-work .how-we-work-container .how-we-work-content .how-we-work-left-content h4 {
+  color: #d9a14c;
+  letter-spacing: 2px;
+  font-weight: 600;
+  text-transform: uppercase;
+  margin-bottom: 20px;
+}
+.how-we-work .how-we-work-container .how-we-work-content .how-we-work-left-content h1 {
+  margin-bottom: 20px;
+  line-height: 40px;
+  font-size: 30px;
+}
+.how-we-work .how-we-work-container .how-we-work-content .how-we-work-left-content button {
+  color: #fff;
+  background-color: #d9a14c;
+  font-weight: 600;
+  padding: 15px;
+  letter-spacing: 2px;
+  border: none;
+  cursor: pointer;
+  text-transform: uppercase;
+  margin-top: 25px;
+}
 .how-we-work .how-we-work-container .how-we-work-content .how-we-work-right-content {
   position: relative;
 }
@@ -449,6 +474,17 @@ body {
 }
 .how-we-work .how-we-work-container .how-we-work-content .how-we-work-right-content .experience-section .how-we-work-experience .experience-trophy {
   display: flex;
+  align-items: center;
+  margin-bottom: 15px;
+  gap: 0.5rem;
+}
+.how-we-work .how-we-work-container .how-we-work-content .how-we-work-right-content .experience-section .how-we-work-experience .experience-trophy img {
+  background-color: #d9a14c;
+  border-radius: 100%;
+  padding: 8px;
+}
+.how-we-work .how-we-work-container .how-we-work-content .how-we-work-right-content .experience-section .how-we-work-experience .experience-trophy h1 {
+  font-size: xx-large;
 }
 .how-we-work .how-we-work-container .how-we-work-content .how-we-work-right-content .how-we-work-dot-image {
   z-index: -1;
@@ -629,6 +665,16 @@ body {
 .blog .blog-container .blog-heading {
   text-align: center;
 }
+.blog .blog-container .blog-heading h4 {
+  color: #d9a14c;
+  letter-spacing: 2px;
+  font-weight: 600;
+  text-transform: uppercase;
+  margin-bottom: 15px;
+}
+.blog .blog-container .blog-heading h1 {
+  font-size: xx-large;
+}
 .blog .blog-container .blog-cards {
   display: flex;
   margin-top: 50px;
@@ -777,6 +823,7 @@ body {
   border: 1px solid #4f5157;
   background-color: #23262d;
   outline: none;
+  color: #d3d4d5;
 }
 .footer .footer-container .footer-first-part .newsletter input::-moz-placeholder {
   color: #c1c2c4;
@@ -792,6 +839,7 @@ body {
   padding: 15px;
   letter-spacing: 2px;
   border: none;
+  cursor: pointer;
 }
 .footer .footer-container .footer-last-part {
   display: flex;
