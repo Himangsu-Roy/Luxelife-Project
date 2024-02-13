@@ -597,7 +597,10 @@ body {
         top: 50%;
         border: 1px solid #d9a14c;
         border-radius: 100%;
-        padding: 9px;
+        padding: 1rem;
+        width: 50px;
+        height: 50px;
+        cursor: pointer;
       }
       .right-arrow-button {
         position: absolute;
@@ -605,7 +608,10 @@ body {
         top: 50%;
         border: 1px solid #d9a14c;
         border-radius: 100%;
-        padding: 9px;
+        padding: 1rem;
+        width: 50px;
+        height: 50px;
+        cursor: pointer;
       }
     }
 
@@ -631,6 +637,116 @@ body {
       }
       .winning-award {
         @include testimonial-counter-style;
+      }
+    }
+  }
+}
+
+// Blog styles
+.blog {
+  margin: 90px 0 70px 0;
+  .blog-container {
+    max-width: 1200px;
+    padding: 20px;
+    margin: 0 auto;
+
+    .blog-heading {
+      text-align: center;
+    }
+
+    .blog-cards {
+      display: flex;
+      margin-top: 50px;
+      gap: 2rem;
+
+      .blog-card {
+        background-color: #fff;
+        .blog-by-user-and-date {
+          display: flex;
+          justify-content: space-between;
+          margin-bottom: 15px;
+          padding: 26px 26px 0 26px;
+
+          .blog-by {
+            //
+          }
+          .blog-date {
+            //
+          }
+        }
+
+        .blog-text-image {
+          display: flex;
+          flex-direction: column;
+          position: relative;
+
+          h2 {
+            line-height: 30px;
+            margin-bottom: 15px;
+            padding: 0 26px 0 26px;
+          }
+          p {
+            line-height: 30px;
+            margin-bottom: 15px;
+            padding: 0 26px 0 26px;
+          }
+
+          .blog-image {
+            position: relative;
+            overflow: hidden;
+            img {
+              width: 100%;
+              display: block;
+              height: 100%;
+            }
+
+            // Add overlay using ::before pseudo-element (similar to previous code)
+            &::before {
+              content: "";
+              position: absolute;
+              top: 0;
+              left: 0;
+              width: 100%;
+              height: 100%;
+              background-color: rgba(0, 0, 0, 0.5);
+              transition: opacity 0.3s ease;
+              opacity: 0;
+            }
+
+            // Show overlay and button on hover
+            &:hover::before {
+              opacity: 1;
+            }
+
+            // Style the arrow button
+            .arrow-button {
+              position: absolute;
+              top: 50%;
+              left: 50%;
+              transform: translate(-50%, -50%);
+              background: none;
+              border: none;
+              cursor: pointer;
+              color: white;
+              font-size: 24px;
+              transition: opacity 0.3s ease;
+              opacity: 0; // Initially hidden
+
+              img {
+                background-color: #d9a14c;
+                border-radius: 100%;
+                padding: 1rem;
+                height: 50px;
+                width: 50px;
+              }
+            }
+
+            // Show the button on hover
+            &:hover .arrow-button {
+              opacity: 1;
+            }
+          }
+        }
       }
     }
   }
