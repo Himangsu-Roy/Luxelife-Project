@@ -35,3 +35,9 @@
   font-weight: 600;
   text-transform: uppercase;
 }
+
+@mixin testimonial-counter-style {
+  background-color: #fff;
+  border-top: 3px solid #d9a14c;
+  padding: 8px 25px; 
+}

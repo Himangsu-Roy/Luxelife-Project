@@ -4,6 +4,7 @@
 /* Variables */
 $hero-bg-image: "../images/hero.png";
 $cta-bg-image: "../images/cta.png";
+$testmonial-bg-image: "../images/testimonial-bg.png";
 $paragrap-text-color: #616670;
 
 // Mixin for background image
@@ -363,13 +364,9 @@ body {
   @include background-image($cta-bg-image);
   min-height: 200px;
   margin-bottom: 50px;
-
-  background-color: rgba(0, 0, 0, 0.09);
   position: relative;
-
   display: flex;
   justify-content: center;
-  align-items: center;
 
   &::before {
     content: "";
@@ -384,7 +381,6 @@ body {
 
   .cta-container {
     display: flex;
-    justify-content: center;
     align-items: center;
     gap: 2rem;
     z-index: 2;
@@ -504,7 +500,6 @@ body {
 
       img {
         width: 100%;
-        max-height: 250px;
       }
 
       .gallary-overlay {
@@ -515,7 +510,7 @@ body {
         align-items: center;
         width: 100%;
         background-color: rgba(0, 0, 0, 0.5);
-        padding: 10px 0px 10px 0px;
+        padding: 10px;
         display: none;
 
         .gallary-overlay-text {
@@ -523,17 +518,119 @@ body {
         }
 
         .right-arrow-button {
-          margin: 0 10px 0 10px;
           cursor: pointer;
           img {
             background-color: #d9a14c;
             padding: 8px 12px;
+            width: 100%;
           }
         }
       }
 
       &:hover .gallary-overlay {
         display: flex;
+      }
+    }
+  }
+}
+
+// Testimonial styles
+.testimonial {
+  @include background-image($testmonial-bg-image);
+  min-height: 400px;
+  position: relative;
+
+  &::before {
+    content: "";
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-color: rgba(0, 0, 0, 0.5);
+    z-index: 1;
+  }
+
+  .testimonial-container {
+    max-width: 1200px;
+    padding: 20px;
+    margin: 0 auto;
+    position: relative;
+    z-index: 2;
+
+    .user-reviews {
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      justify-content: center;
+      min-height: 400px;
+
+      .user-comment {
+        text-align: center;
+        max-width: 600px;
+        margin: 0 auto;
+        margin-top: 20px;
+        color: #fff;
+      }
+      .user-info {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        gap: 18px;
+        color: #fff;
+
+        .user-image {
+          width: 100px;
+          height: 100px;
+        }
+      }
+    }
+
+    .arrow-button {
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+
+      .left-arrow-button {
+        position: absolute;
+        left: 0;
+        top: 50%;
+        border: 1px solid #d9a14c;
+        border-radius: 100%;
+        padding: 9px;
+      }
+      .right-arrow-button {
+        position: absolute;
+        right: 0;
+        top: 50%;
+        border: 1px solid #d9a14c;
+        border-radius: 100%;
+        padding: 9px;
+      }
+    }
+
+    .counter {
+      text-align: center;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      gap: 2rem;
+      position: absolute;
+      left: 0;
+      right: 0;
+      top: 92%;
+
+      .team-member {
+        @include testimonial-counter-style;
+      }
+      .complete-project {
+        @include testimonial-counter-style;
+      }
+      .client-review {
+        @include testimonial-counter-style;
+      }
+      .winning-award {
+        @include testimonial-counter-style;
       }
     }
   }
