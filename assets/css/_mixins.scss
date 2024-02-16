@@ -3,7 +3,7 @@
   background-color: #fff;
   padding: 30px;
   width: 410px;
-  height: 300px;
+  height: 260px;
   margin-top: 40px;
   display: flex;
   flex-direction: column;
@@ -23,6 +23,10 @@
     background-color: #fff;
     align-self: flex-start;
     padding: 20px;
+    letter-spacing: 1px;
+    font-size: 12px;
+    font-weight: 600;
+    text-decoration: none;
     box-shadow: 0px 4px 10px rgba(0, 0, 0, 0.1);
     // transition: box-shadow 0.3s ease;
   }
@@ -31,9 +35,10 @@
 // small heading style
 @mixin small-heading-style {
   color: #d9a14c;
-  letter-spacing: 2px;
+  letter-spacing: 2.5px;
   font-weight: 600;
   text-transform: uppercase;
+  font-size: 13px;
 }
 
 @mixin testimonial-counter-style {
